@@ -9,16 +9,6 @@ import java.util.Comparator;
 import java.util.HashMap;
 
 public class DataRecordLoader {
-    public static void main(String[] args) throws DataFileException {
-        ArrayList<DataRecord> list = load("data/thg-emissionen_1990-2020.csv");
-        for (DataRecord dataRecord : list) {
-            System.out.println(dataRecord.getSector());
-            HashMap<Integer, Double> map = dataRecord.getValues();
-            for (Integer key : map.keySet()) {
-                System.out.println(key + " - " + map.get(key));
-            }
-        }
-    }
 
     public static ArrayList<DataRecord> load(String path) throws DataFileException {
         ArrayList<DataRecord> list = new ArrayList<>();
